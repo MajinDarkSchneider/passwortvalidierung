@@ -30,5 +30,10 @@ class MainTest {
        boolean charactersMatchRequirements = Main.checkForCharacterRequirement(testString[0]);
        assertTrue(charactersMatchRequirements);
     }
-
+    @Test
+    void isFrequentlyUsedPassword(){
+        String[] testString = {"Tardis","Doctor", "11. Regeneration","Password1"};
+        boolean usingFrequentPassword = Main.checkForFrequentlyUsed(testString[2]);
+        assertFalse(usingFrequentPassword);
+    }
 }

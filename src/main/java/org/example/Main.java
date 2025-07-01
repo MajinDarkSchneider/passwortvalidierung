@@ -47,4 +47,13 @@ public class Main {
             return false;
         }
     }
+    public static boolean checkForFrequentlyUsed(String password){
+        String[] frequentPasswords = {"Password", "Password1", "Passwort", "Password123", "God", "Safe"};
+        for (String frequentPassword : frequentPasswords) {
+            if(password.equals(frequentPassword)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
