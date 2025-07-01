@@ -56,4 +56,13 @@ public class Main {
         }
         return false;
     }
+    public static boolean checkForSpecialCharacters(String password){
+        Pattern pattern = Pattern.compile("[^a-zA-Z0-9+]");
+        Matcher matcher = pattern.matcher(password);
+        if(matcher.find()){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

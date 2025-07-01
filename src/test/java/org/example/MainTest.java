@@ -36,4 +36,10 @@ class MainTest {
         boolean usingFrequentPassword = Main.checkForFrequentlyUsed(testString[2]);
         assertFalse(usingFrequentPassword);
     }
+    @Test
+    void hasSpecialCharacters(){
+        String[] testString = {"Tardis","Doctor", "11. Regeneration","Password1","!asdeASd"};
+        boolean usingSpecialCharacters = Main.checkForSpecialCharacters(testString[4]);
+        assertTrue(usingSpecialCharacters);
+    }
 }
